@@ -97,7 +97,7 @@ public final class DynamicSwitch<T, R> {
         cases[ids.get(i)] = i;
       }
       if (defaultCase == null) {
-        defaultCase = empty(methodType(outputType, int.class));
+        defaultCase = empty(methodType(outputType, int.class, inputType));
       }
       return new DynamicSwitch<>(
           t -> {
